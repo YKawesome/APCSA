@@ -39,7 +39,7 @@ public class Submarine extends ScoutBoat implements Attacker{
             Coordinates c = getLocation();
             for(int i = 0; i < getVision(); i++) {
                 Random r = new Random();
-                Boat occupant = w.getOccupant(w.getAdjacentLocation(c, getDirectionInt()));
+                Boat occupant = w.isLocationValid(c) ? w.getOccupant(w.getAdjacentLocation(c, getDirectionInt())) : null;
                 if(occupant != null && occupant.getTeam()!=getTeam()) {
                     numOfTorpedoes--;
                     return "Fire torpedoes!\n" + occupant.takeHit(r.nextInt(1,occupant.getHealth()+1), w);
