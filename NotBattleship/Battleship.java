@@ -4,7 +4,6 @@ public class Battleship extends Boat implements Attacker {
 
     public Battleship(int team, Coordinates location, int direction) {
         super(team, location, direction, 4, 3, 1);
-        //TODO Auto-generated constructor stub
     }
 
     public String getID() {
