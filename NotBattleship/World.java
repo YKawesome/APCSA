@@ -34,6 +34,7 @@ public class World {
 	}
 	
 	public boolean isLocationValid(Coordinates c) {
+		if(c==null) return false;
 		return c.getX() < getWidth() && c.getX() >= 0 && c.getY() < getHeight() && c.getY() >= 0;
 	}
 	
