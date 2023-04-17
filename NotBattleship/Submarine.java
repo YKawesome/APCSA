@@ -57,9 +57,13 @@ public class Submarine extends ScoutBoat implements Attacker{
             int i = r.nextInt(8);
             int j = r.nextInt(8);
 
+            if(Math.abs(i-j) == 4) continue;
+
             Coordinates testLoc = w.getAdjacentLocation(w.getAdjacentLocation(getLocation(), i), j);
+            testLoc = w.isLocationValid(testLoc) ? testLoc : null;
             if(w.getOccupant(testLoc)==null) {
                 Coordinates oldLoc = getLocation();
+                w.clearOccupant(oldLoc);
                 setLocation(testLoc);
                 return String.format("%s%d moves from %s to %s.", getID(), getTeam(), oldLoc, getLocation());
             }

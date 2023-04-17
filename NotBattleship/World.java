@@ -30,7 +30,7 @@ public class World {
 	}
 	
 	public Boat getOccupant(Coordinates c) {
-		return map[c.getX()][c.getY()];
+		return isLocationValid(c) ? map[c.getX()][c.getY()] : null;
 	}
 	
 	public boolean isLocationValid(Coordinates c) {
@@ -44,7 +44,6 @@ public class World {
 	public boolean setOccupant(Boat b, Coordinates c) {
 		if(!isLocationOccupied(c) && isLocationValid(c)) {
 			map[c.getX()][c.getY()] = b;
-			System.out.println(String.format("Set %s at %s", b, c));
 			return true;
 		}
 		else return false;
@@ -56,7 +55,7 @@ public class World {
 	}
 	
 	public Coordinates getAdjacentLocation(Coordinates c, int i) {
-		Coordinates returnC = null;
+		Coordinates returnC = c;
 		if(i == 0) returnC = new Coordinates(c.getX(), c.getY()-1);
 		if(i == 1) returnC = new Coordinates(c.getX()+1, c.getY()-1);
 		if(i == 2) returnC = new Coordinates(c.getX()+1, c.getY());

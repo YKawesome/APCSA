@@ -98,11 +98,11 @@
 	
 	
 // 	public static void clearTeam(Boat[] b, World w) {
-// 		w.setOccupant(null,b[0].getLocation());
-//  		w.setOccupant(null,b[1].getLocation());
-//  		w.setOccupant(null,b[2].getLocation());
-//  		w.setOccupant(null,b[3].getLocation());
-//  		w.setOccupant(null,b[4].getLocation());
+// 		w.clearOccupant(b[0].getLocation());
+//         w.clearOccupant(b[1].getLocation());
+//         w.clearOccupant(b[2].getLocation());
+//         w.clearOccupant(b[3].getLocation());
+//         w.clearOccupant(b[4].getLocation());
 // 	}
 	
 	

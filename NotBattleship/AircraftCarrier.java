@@ -3,7 +3,7 @@ package NotBattleship;
 import java.util.Random;
 
 public class AircraftCarrier extends Boat implements Attacker{
-    private boolean hasPlanes;
+    private boolean hasPlanes = true;
 
     public AircraftCarrier(int team, Coordinates location, int direction) {
         super(team, location, direction, 5, 1, 1);
