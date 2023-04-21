@@ -64,7 +64,7 @@ for link in linklist:
 
     time.sleep(1)
 
-    code_elem = driver.find_element_by_css_selector("div#ace_div > textarea")
+    code_elem = driver.find_element(By.CSS_SELECTOR, "div#ace_div > textarea")
     code_elem.send_keys(command_key + "a")
     code_elem.send_keys(command_key + "c")
     clipboard_content = pyperclip.paste()
