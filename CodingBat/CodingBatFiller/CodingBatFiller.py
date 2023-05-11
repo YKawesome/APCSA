@@ -56,6 +56,7 @@ for td in tds:
 # Create/access file to write to
 title = collection.split("-")[0] + collection.split("-")[1]
 file = open(f"{title}.java", "a")
+file.write("package CodingBat;\n\n")
 file.write(f"public class {title} " + "{\n")
 
 # For each exercise, copy the code and write it to the java file
