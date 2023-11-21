@@ -1,4 +1,5 @@
 package CodingBat;
+
 public class Warmup1 {
   public boolean sleepIn(boolean weekday, boolean vacation) {
     if (!weekday || vacation) {
